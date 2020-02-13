@@ -2,13 +2,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>jQuery+CSS3情人节爱心特效 - Linux公社www.linuxidc.com</title>
+<title>情人节快乐！</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="description" content="Linux公社(www.linuxidc.com)是专业的Linux系统门户网站，实时发布最新Linux资讯，包括Linux、Ubuntu、Fedora、RedHat、红旗Linux、Linux教程、Linux认证、SUSE Linux、Android、Oracle、Hadoop等技术。"/>
-<meta name="keywords" content="Linux,Ubuntu,Fedora,RedHat,红旗Linux,Linux教程,Linux系统,Linux安装,SUSE Linux,Android,Oracle"/>
-<link rel="canonical" href="http://www.linuxidc.com/"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<link rel="canonical" href=""/>
 <link type="text/css" rel="stylesheet" href="css/qrj.css" />
-
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
 </head>
 <body bgcolor="#FFD1D6">
 <center>
@@ -35,5 +38,24 @@
 <!--animation.js-->
 <script src="js/qrj.js"></script>
 </center>
+<div id="messages">
+	我们一起走过的时光已经这么久辣！
+	<div id="elapseClock"></div>
+</div>
+
+<script type="text/javascript">
+var together = new Date();
+together.setFullYear(2019, 3, 1);
+together.setHours(3);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+</script>
 </body>
 </html>
